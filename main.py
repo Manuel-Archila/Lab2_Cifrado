@@ -110,14 +110,14 @@ def _xor(word, key):
     return result_list
 
 print("1. Caracteres a bytes")
-word1 = 'ho'
+word1 = 'hola'
 print("Palabra:", word1)
 letters_ascii = word2ascii(word1)
 letters_binary_word1 = []
 for letter in letters_ascii:
     letters_binary_word1.append(decimal2binary(letter))
 palabra1 = "".join(letters_binary_word1)
-print(palabra1)
+print("Descifrado:",palabra1)
 
 word2 = 'caminar'
 print("Palabra:", word2)
@@ -127,24 +127,26 @@ letters_binary_word2 = []
 for letter in letters_ascii:
     letters_binary_word2.append(decimal2binary(letter))
 palabra2 = "".join(letters_binary_word2)
-print(palabra2)
+print("Descifrado:",palabra2)
 
 print()
 
 print("2. Bytes a caracteres")
 print("Palabra:", word1)
+print("Cadena en bytes:", palabra1)
 letters_from_binary = []
 for binary in letters_binary_word1:
     letters_from_binary.append(binary2decimal(binary))
 palabra1_ascii = ascii2word(letters_from_binary)
-print(palabra1_ascii)
+print("Descifrado:",palabra1_ascii)
 
 print("Palabra:", word2)
+print("Cadena en bytes:", palabra2)
 letters_from_binary = []
 for binary in letters_binary_word2:
     letters_from_binary.append(binary2decimal(binary))
 palabra2_ascii = ascii2word(letters_from_binary)
-print(palabra2_ascii)
+print("Descifrado:",palabra2_ascii)
 
 print()
 
@@ -153,13 +155,13 @@ print("Palabra:", word1)
 print("Cadena en bytes:", palabra1)
 six_block_word1 = sixblockbinary(letters_binary_word1)
 base64_word1 = sixblockbinary2base64(six_block_word1)
-print(base64_word1)
+print("Descifrado:",base64_word1)
 
 print("Palabra:", word2)
 print("Cadena en bytes:", palabra2)
 six_block_word2 = sixblockbinary(letters_binary_word2)
 base64_word2 = sixblockbinary2base64(six_block_word2)
-print(base64_word2)
+print("Descifrado:",base64_word2)
 
 print()
 
@@ -172,7 +174,7 @@ letters_from_binary = []
 for binary in binary_word1:
     letters_from_binary.append(binary2decimal(binary))
 palabra1_ascii = ascii2word(letters_from_binary)
-print(palabra1_ascii)
+print("Descifrado:",palabra1_ascii)
 
 print("Palabra:", word2)
 print("Cadena en base64:", base64_word2)
@@ -182,7 +184,7 @@ letters_from_binary = []
 for binary in binary_word2:
     letters_from_binary.append(binary2decimal(binary))
 palabra2_ascii = ascii2word(letters_from_binary)
-print(palabra2_ascii)
+print("Descifrado:",palabra2_ascii)
 
 
 
