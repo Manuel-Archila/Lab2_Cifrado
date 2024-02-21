@@ -248,7 +248,7 @@ apply_xor_to_images('./imagen1.jpg','./imagen2.jpg')
 
 print("--- Parte 9 ---")
 
-string = "110010101011000101001010101111010100110101010111000100010001110010101011000101001010101111010100110101010111000100010001"
+string = "111011001011111100011110111010111101100001111001000000000101100010000000001010010110110010100110101000000100101011100011101100111101000001011101111111"
 
 probabilities_bits = calcular_distribuciones(string, 1)
 
@@ -259,6 +259,13 @@ probabilities_trigrams = calcular_distribuciones(string, 3)
 show_histogram(probabilities_bits, 'Distribución de Probabilidad de Bits')
 show_histogram(probabilities_bigrams, 'Distribución de Probabilidad de Bigramas')
 show_histogram(probabilities_trigrams, 'Distribución de Probabilidad de Trigramas')
+
+print("Como se puede observar en las diferntes gráficas, para los bits tienen una frecuencia simila, esto indica una distribución equitativa de bits.")
+print("En el caso de los bigramas, se puede observar que los bigramas 11 y 00 tienen una frecuencia mayor que los otros bigramas.")
+print("En el caso de los trigramas, se puede observar que los trigramas 111 y 000 tienen una frecuencia mayor que los otros trigramas.")
+
+print("Estos son útiles para visualizar y comprender la distribución de patrones en secuencias de bits, bigramas o trigramas, lo que puede ser valioso para el análisis de datos y la detección de patrones.")
+
 
 
 
